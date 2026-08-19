@@ -1,3 +1,5 @@
+# Created by: Ms.Aye Theingi Thwin
+
 import pandas as pd
 import numpy as np
 
@@ -305,6 +307,29 @@ inventory = pd.DataFrame(
 
 print("Inventory records:", len(inventory))
 
+stores.to_csv(
+    "stores.csv",
+    index=False
+)
+
+products.to_csv(
+    "products.csv",
+    index=False
+)
+
+sales.to_csv(
+    "sales.csv",
+    index=False
+)
+
+inventory.to_csv(
+    "inventory.csv",
+    index=False
+)
+
+print("All datasets saved successfully!")
+
+"""
 
 # Write each data frames to a single Excel file with different sheets
 with pd.ExcelWriter('generate.xlsx', engine='openpyxl') as writer:
@@ -314,3 +339,12 @@ with pd.ExcelWriter('generate.xlsx', engine='openpyxl') as writer:
     inventory.to_excel(writer, sheet_name='Inventory', index=False) 
 
 print("Excel file created successfully!")
+
+
+
+print(stores.shape)
+print(products.shape)
+print(sales.shape)
+print(inventory.shape)
+
+"""
